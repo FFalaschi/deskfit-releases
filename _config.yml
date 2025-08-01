@@ -1,0 +1,48 @@
+# GitHub Pages configuration for DeskFit Updates
+title: "DeskFit Updates"
+description: "Official update feed and downloads for DeskFit - Your desk exercise companion"
+url: "https://releases.deskfit.app"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Custom settings
+author: "Franco Falaschi"
+email: "support@deskfit.app"
+twitter_username: ""
+github_username: "francofalaschi"
+
+# SEO settings
+lang: en_US
+timezone: UTC
+
+# Custom headers and MIME types
+plugins:
+  - jekyll-redirect-from
+
+# Default values for front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

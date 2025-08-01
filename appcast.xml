@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
         <title>DeskFit Updates</title>
-        <link>https://deskfit.app</link>
+        <link>https://desk.fit</link>
         <description>Updates for DeskFit - Your desk exercise companion</description>
         <language>en</language>
     <item>
@@ -21,11 +21,11 @@
             </ul>
         ]]></description>
         <pubDate>Thu, 01 Aug 2025 09:15:00 +0000</pubDate>
-        <sparkle:version>5</sparkle:version>
-        <sparkle:shortVersionString>0.3.5</sparkle:shortVersionString>
+        <sparkle:version>7</sparkle:version>
+        <sparkle:shortVersionString>0.3.6</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
         <enclosure 
-            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.5/DeskFit-v0.3.5.dmg"
+            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.6/DeskFit-v0.3.6.dmg"
             length="2931754"
             type="application/octet-stream"
             sparkle:edSignature="cd736hwnSbnMunu1Lz5W9I74jwzT6cwm2K46xKthk1ptpH8pb3bt8kGk6iWFWK/p4SqJTWKYiacvKeCqeaUhDg==" />

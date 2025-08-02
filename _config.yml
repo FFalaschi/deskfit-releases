@@ -1,7 +1,7 @@
 # GitHub Pages configuration for DeskFit Updates
 title: "DeskFit Updates"
 description: "Official update feed and downloads for DeskFit - Your desk exercise companion"
-url: "https://releases.deskfit.app"
+url: "https://releases.desk.fit"
 baseurl: ""
 
 # Build settings

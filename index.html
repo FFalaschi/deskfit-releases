@@ -3,223 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeskFit Updates</title>
-    <meta name="description" content="Official update feed and downloads for DeskFit - Your desk exercise companion">
+    <title>DeskFit - Download Latest Version</title>
+    <meta name="description" content="Download the latest version of DeskFit - Your desk exercise companion for macOS">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
     <style>
         :root {
             --primary-color: #007AFF;
-            --secondary-color: #5856D6;
-            --background-color: #FFFFFF;
-            --text-color: #1D1D1F;
-            --secondary-text: #6E6E73;
-            --border-color: #D2D2D7;
-            --card-background: #F2F2F7;
+            --primary-hover: #0056CC;
+            --success-color: #34C759;
+            --background: #FFFFFF;
+            --surface: #F8F9FA;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --border: #E5E5E7;
+            --shadow: rgba(0, 0, 0, 0.04);
+            --shadow-hover: rgba(0, 0, 0, 0.12);
+            --radius: 12px;
+            --radius-large: 20px;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: var(--text-color);
-            background: var(--background-color);
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        
+
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 24px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        
+
         .header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 48px;
         }
-        
+
         .logo {
-            font-size: 64px;
-            margin-bottom: 20px;
-            line-height: 1;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: transform 0.2s ease;
         }
-        
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 18px;
+        }
+
         h1 {
             font-size: 48px;
             font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--text-color);
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
         }
-        
+
         .subtitle {
             font-size: 20px;
-            color: var(--secondary-text);
-            margin-bottom: 40px;
+            color: var(--text-secondary);
+            font-weight: 400;
         }
-        
-        .status-badge {
-            display: inline-block;
-            background: #34C759;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
+
+        .main-card {
+            background: var(--surface);
+            border-radius: var(--radius-large);
+            padding: 40px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 2px 12px var(--shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 32px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
         }
-        
-        .card {
-            background: var(--card-background);
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 24px;
-            border: 1px solid var(--border-color);
+
+        .main-card:hover {
+            box-shadow: 0 8px 25px var(--shadow-hover);
         }
-        
-        .card h2 {
+
+        .release-info {
+            margin-bottom: 32px;
+        }
+
+        .release-title {
             font-size: 24px;
-            margin-bottom: 16px;
-            color: var(--text-color);
-        }
-        
-        .card p {
-            color: var(--secondary-text);
-            margin-bottom: 16px;
-        }
-        
-        .version-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 24px;
-        }
-        
-        .version-badge {
-            background: var(--primary-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 8px;
             font-weight: 600;
+            margin-bottom: 12px;
         }
-        
-        .download-link {
+
+        .version-number {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: rgba(142, 142, 147, 0.12);
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .release-description {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .download-btn {
             background: var(--primary-color);
             color: white;
             text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 16px 32px;
+            border-radius: var(--radius);
             font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .download-link:hover {
-            background: #0056CC;
-            transform: translateY(-2px);
-        }
-        
-        .tech-info {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 40px;
-        }
-        
-        .tech-info h3 {
             font-size: 18px;
-            margin-bottom: 16px;
-            color: var(--text-color);
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        .tech-info code {
-            background: #F5F5F5;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'SF Mono', Monaco, monospace;
-            font-size: 14px;
+
+        .download-btn:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
         }
-        
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .feedback-btn {
+            background: transparent;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--radius);
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .feedback-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-1px);
+        }
+
         .footer {
             text-align: center;
-            margin-top: 60px;
-            color: var(--secondary-text);
+            margin-top: 48px;
+            color: var(--text-secondary);
             font-size: 14px;
         }
-        
+
         .footer a {
             color: var(--primary-color);
             text-decoration: none;
+            font-weight: 500;
         }
-        
+
         .footer a:hover {
             text-decoration: underline;
         }
-        
-        @media (max-width: 600px) {
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(52, 199, 89, 0.1);
+            color: var(--success-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success-color);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 640px) {
             .container {
-                padding: 20px 16px;
+                padding: 40px 20px;
             }
             
             h1 {
                 font-size: 36px;
             }
             
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .main-card {
+                padding: 32px 24px;
+            }
+            
             .logo {
-                font-size: 48px;
+                width: 64px;
+                height: 64px;
             }
             
-            .version-info {
-                flex-direction: column;
-                align-items: stretch;
+            .download-btn {
+                padding: 14px 28px;
+                font-size: 16px;
+                width: 100%;
+                justify-content: center;
             }
             
-            .download-link {
+            .feedback-btn {
+                width: 100%;
                 text-align: center;
             }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 16px;
+            }
+            
+            .main-card {
+                padding: 24px 20px;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #000000;
+                --surface: #1C1C1E;
+                --text-primary: #FFFFFF;
+                --text-secondary: #8E8E93;
+                --border: #2C2C2E;
+                --shadow: rgba(0, 0, 0, 0.3);
+                --shadow-hover: rgba(0, 0, 0, 0.5);
+            }
+            
+            .version-number {
+                background: rgba(142, 142, 147, 0.24);
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles */
+        .download-btn:focus,
+        .feedback-btn:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo">🏃‍♂️</div>
-            <h1>DeskFit Updates</h1>
-            <p class="subtitle">Official update feed for your desk exercise companion</p>
-            <div class="status-badge">✅ Service Active</div>
-        </div>
-        
-        <div class="card">
-            <h2>Latest Release</h2>
-            <p>DeskFit automatically checks for updates every 24 hours. Users can also manually check by clicking "Check for Updates" in the app's menu bar.</p>
-            <div class="version-info">
-                <div class="version-badge">v0.3.7</div>
-                <a href="https://github.com/FFalaschi/DeskFit/releases/latest" class="download-link">View Release</a>
+        <header class="header">
+            <div class="logo">
+                <img src="assets/logo.png" alt="DeskFit Logo" />
             </div>
-        </div>
+            <h1>DeskFit</h1>
+            <p class="subtitle">Your desk exercise companion</p>
+        </header>
         
-        <div class="card">
-            <h2>Automatic Updates</h2>
-            <p>DeskFit uses the Sparkle framework to deliver seamless, secure updates. All updates are cryptographically signed and delivered over HTTPS.</p>
-            <p><strong>Update Feed:</strong> Hosted on GitHub Pages for maximum reliability</p>
-            <p><strong>Download Source:</strong> GitHub Releases with built-in CDN</p>
-        </div>
+        <main class="main-card">
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                Latest Version Available
+            </div>
+            
+            <div class="release-info">
+                <h2 class="release-title">Ready to Download</h2>
+                <div class="version-number">v0.3.7</div>
+                <p class="release-description">
+                    Enhanced performance, UI improvements, and bug fixes with secure automatic updates.
+                </p>
+            </div>
+            
+            <div class="download-section">
+                <a href="https://github.com/FFalaschi/DeskFit/releases/latest" 
+                   class="download-btn"
+                   aria-label="Download DeskFit version 0.3.7">
+                    <span>Download DeskFit v0.3.7</span>
+                </a>
+                
+                <a href="https://tally.so/r/mBJkMN" 
+                   class="feedback-btn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Leave feedback for DeskFit">
+                    Leave Feedback
+                </a>
+            </div>
+        </main>
         
-        <div class="tech-info">
-            <h3>Technical Information</h3>
-            <p><strong>Update Feed URL:</strong> <code>https://releases.desk.fit/appcast.xml</code></p>
-            <p><strong>Format:</strong> RSS 2.0 with Sparkle extensions</p>
-            <p><strong>Signature:</strong> EdDSA cryptographic signatures</p>
-            <p><strong>Distribution:</strong> GitHub Releases + GitHub Pages</p>
-            <p><strong>SSL/TLS:</strong> Automatic HTTPS with certificate pinning</p>
-        </div>
-        
-        <div class="footer">
+        <footer class="footer">
             <p>© 2025 Franco Falaschi. All rights reserved.</p>
-            <p><a href="https://desk.fit">Visit DeskFit Website</a> | <a href="https://github.com/FFalaschi/deskfit-releases">GitHub Repository</a></p>
-        </div>
+            <p><a href="https://desk.fit">Visit DeskFit Website</a></p>
+        </footer>
     </div>
 </body>
 </html>

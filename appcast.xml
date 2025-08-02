@@ -2,33 +2,29 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
         <title>DeskFit Updates</title>
-        <link>https://desk.fit</link>
+        <link>https://deskfit.app</link>
         <description>Updates for DeskFit - Your desk exercise companion</description>
         <language>en</language>
     <item>
-        <title>DeskFit 0.3.5</title>
+        <title>DeskFit 0.3.7</title>
         <description><![CDATA[
-            <h3>DeskFit 0.3.5</h3>
-            <p>Swift 6 compliance and enhanced Sparkle update system reliability.</p>
+            <h3>DeskFit 0.3.7</h3>
+            <p>Latest version with improvements and bug fixes.</p>
             <ul>
-                <li>Fixed all Swift 6 concurrency warnings and compliance issues</li>
-                <li>Resolved Sparkle XPC service runtime failures in development</li>
-                <li>Enhanced DEBUG/RELEASE build separation for better development experience</li>
-                <li>Improved update system error handling and recovery</li>
-                <li>Code quality improvements and unused variable cleanup</li>
-                <li>Maintained full production Sparkle functionality</li>
-                <li>Professional build process with proper code signing</li>
+                <li>Enhanced performance and stability</li>
+                <li>UI/UX improvements</li>
+                <li>Bug fixes and optimizations</li>
             </ul>
         ]]></description>
-        <pubDate>Thu, 01 Aug 2025 09:15:00 +0000</pubDate>
-        <sparkle:version>7</sparkle:version>
-        <sparkle:shortVersionString>0.3.6</sparkle:shortVersionString>
+        <pubDate>Sat, 02 Aug 2025 13:38:06 +0000</pubDate>
+        <sparkle:version>20</sparkle:version>
+        <sparkle:shortVersionString>0.3.7</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
         <enclosure 
-            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.6/DeskFit-v0.3.6.dmg"
-            length="2931754"
+            url="https://github.com/FFalaschi/DeskFit/releases/download/v0.3.7/DeskFit-v0.3.7.dmg"
+            length="2828598"
             type="application/octet-stream"
-            sparkle:edSignature="cd736hwnSbnMunu1Lz5W9I74jwzT6cwm2K46xKthk1ptpH8pb3bt8kGk6iWFWK/p4SqJTWKYiacvKeCqeaUhDg==" />
+            sparkle:edSignature="l3R/dWuHOKlSOdbAif+kfi3sbTN2GYbv3Z9DRt1dQyyqxpAzPdH4pPpQo6R2lk8LVoJ3hxWuN/pXNONg2fHzCQ==" />
     </item>
     </channel>
 </rss>

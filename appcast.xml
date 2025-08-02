@@ -21,7 +21,7 @@
         <sparkle:shortVersionString>0.3.7</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
         <enclosure 
-            url="https://github.com/FFalaschi/DeskFit/releases/download/v0.3.7/DeskFit-v0.3.7.dmg"
+            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.7/DeskFit-v0.3.7.dmg"
             length="2828598"
             type="application/octet-stream"
             sparkle:edSignature="l3R/dWuHOKlSOdbAif+kfi3sbTN2GYbv3Z9DRt1dQyyqxpAzPdH4pPpQo6R2lk8LVoJ3hxWuN/pXNONg2fHzCQ==" />

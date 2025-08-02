@@ -6,9 +6,9 @@
         <description>Updates for DeskFit - Your desk exercise companion</description>
         <language>en</language>
     <item>
-        <title>DeskFit 0.3.7</title>
+        <title>DeskFit 0.3.8</title>
         <description><![CDATA[
-            <h3>DeskFit 0.3.7</h3>
+            <h3>DeskFit 0.3.8</h3>
             <p>Latest version with improvements and bug fixes.</p>
             <ul>
                 <li>Enhanced performance and stability</li>
@@ -16,15 +16,15 @@
                 <li>Bug fixes and optimizations</li>
             </ul>
         ]]></description>
-        <pubDate>Sat, 02 Aug 2025 13:38:06 +0000</pubDate>
-        <sparkle:version>20</sparkle:version>
-        <sparkle:shortVersionString>0.3.7</sparkle:shortVersionString>
+        <pubDate>Sat, 02 Aug 2025 18:16:32 +0000</pubDate>
+        <sparkle:version>21</sparkle:version>
+        <sparkle:shortVersionString>0.3.8</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
         <enclosure 
-            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.7/DeskFit-v0.3.7.dmg"
-            length="2828598"
+            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.8/DeskFit-v0.3.8.dmg"
+            length="2790243"
             type="application/octet-stream"
-            sparkle:edSignature="l3R/dWuHOKlSOdbAif+kfi3sbTN2GYbv3Z9DRt1dQyyqxpAzPdH4pPpQo6R2lk8LVoJ3hxWuN/pXNONg2fHzCQ==" />
+            sparkle:edSignature="w+/U8ciXzJX6XbfS0asR6IKQG8MrvOtARyWCDGakCI/gOQa/b48Dg/kkepHavt9b3i9PWOnC6yLhgHcTqD7qBg==" />
     </item>
     </channel>
 </rss>

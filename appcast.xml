@@ -21,10 +21,10 @@
         <sparkle:shortVersionString>0.3.9</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
         <enclosure 
-            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.9/DeskFit-v0.3.9.dmg"
-            length="4495534"
+            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.9/DeskFit-v0.3.9-notarized.dmg"
+            length="4548359"
             type="application/octet-stream"
-            sparkle:edSignature="B7tJMMOcxBw9g8mYG6ARpPRFc7r9hRHIMJv+r1RcU3xZTuLCruWljjjsXdUJPjoDv+/gNNCs+utk+VjqF3JbAw==" />
+            sparkle:edSignature="hIuy4he6s0bRthsUyesfb3eQPwt+P0jI7h39NWLPxUM24e/3oW9YX6bQTvSZhdwasIut5hNcXza/+pAKR/4ABA==" />
     </item>
     </channel>
 </rss>

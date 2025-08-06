@@ -5,27 +5,27 @@
         <link>https://deskfit.app</link>
         <description>Updates for DeskFit - Your desk exercise companion</description>
         <language>en</language>
-    <item>
-        <title>DeskFit 0.4.0</title>
-        <description><![CDATA[
-            <h3>DeskFit 0.4.0</h3>
-            <p>Major release with enhanced features and improvements.</p>
-            <ul>
-                <li>New version 0.4.0 with performance enhancements</li>
-                <li>Improved UI/UX and stability</li>
-                <li>Enhanced Sparkle update system</li>
-                <li>Bug fixes and optimizations</li>
-            </ul>
-        ]]></description>
-        <pubDate>Wed, 06 Aug 2025 08:25:21 +0000</pubDate>
-        <sparkle:version>22</sparkle:version>
-        <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
-        <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-        <enclosure 
-            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.0/DeskFit-v0.4.0.dmg"
-            length="4303123"
-            type="application/octet-stream"
-            sparkle:edSignature="JlMYHrkog8nIu215DL+VDPqmZJPL0f65wKBqbZAUp3FTCHVbJQBcOxPsQzEXRIVLdxcP9xCTCGCGy8tGPcCvBA==" />
-    </item>
+        <item>
+            <title>DeskFit 0.4.0</title>
+            <description><![CDATA[
+                <h3>DeskFit 0.4.0 - Enhanced Performance</h3>
+                <p><strong>Working Release:</strong> This version includes all DeskFit features and runs without security warnings.</p>
+                <ul>
+                    <li>Enhanced performance and stability</li>
+                    <li>UI/UX improvements and optimizations</li>
+                    <li>Complete signing with Apple Developer ID</li>
+                    <li>Bug fixes and code refinements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Wed, 06 Aug 2025 09:49:08 +0000</pubDate>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure 
+                url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.0/DeskFit-v0.4.0.dmg"
+                length="3134612"
+                type="application/octet-stream"
+                sparkle:edSignature="MpQoPg/FdQ2JkedYA6sWO9Ux5he4KMbgWq2hefOVUTxVEXNCbiANgrx1K9YhueVRbdaOTr1UhrQMhRPPDjQhAg==" />
+        </item>
     </channel>
 </rss>

@@ -6,25 +6,26 @@
         <description>Updates for DeskFit - Your desk exercise companion</description>
         <language>en</language>
     <item>
-        <title>DeskFit 0.3.9</title>
+        <title>DeskFit 0.4.0</title>
         <description><![CDATA[
-            <h3>DeskFit 0.3.9</h3>
-            <p>Latest version with improvements and bug fixes.</p>
+            <h3>DeskFit 0.4.0</h3>
+            <p>Major release with enhanced features and improvements.</p>
             <ul>
-                <li>Enhanced performance and stability</li>
-                <li>UI/UX improvements</li>
+                <li>New version 0.4.0 with performance enhancements</li>
+                <li>Improved UI/UX and stability</li>
+                <li>Enhanced Sparkle update system</li>
                 <li>Bug fixes and optimizations</li>
             </ul>
         ]]></description>
-        <pubDate>Mon, 04 Aug 2025 12:46:31 +0000</pubDate>
+        <pubDate>Wed, 06 Aug 2025 08:25:21 +0000</pubDate>
         <sparkle:version>22</sparkle:version>
-        <sparkle:shortVersionString>0.3.9</sparkle:shortVersionString>
+        <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
         <enclosure 
-            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.3.9/DeskFit-v0.3.9-notarized.dmg"
-            length="4548359"
+            url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.0/DeskFit-v0.4.0.dmg"
+            length="4303123"
             type="application/octet-stream"
-            sparkle:edSignature="hIuy4he6s0bRthsUyesfb3eQPwt+P0jI7h39NWLPxUM24e/3oW9YX6bQTvSZhdwasIut5hNcXza/+pAKR/4ABA==" />
+            sparkle:edSignature="JlMYHrkog8nIu215DL+VDPqmZJPL0f65wKBqbZAUp3FTCHVbJQBcOxPsQzEXRIVLdxcP9xCTCGCGy8tGPcCvBA==" />
     </item>
     </channel>
 </rss>

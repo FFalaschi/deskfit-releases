@@ -6,6 +6,30 @@
         <description>Updates for DeskFit - Your desk exercise companion</description>
         <language>en</language>
         <item>
+            <title>DeskFit 0.4.2</title>
+            <description><![CDATA[
+                <h3>DeskFit 0.4.2 - Universal Binary Support</h3>
+                <p><strong>Universal Binary:</strong> Now supports both Intel and Apple Silicon Macs with a single app!</p>
+                <ul>
+                    <li>✅ Universal binary - works on both Intel (x86_64) and Apple Silicon (arm64) Macs</li>
+                    <li>✅ Native performance on both processor types</li>
+                    <li>✅ Single app bundle for all Mac users</li>
+                    <li>✅ Enhanced stability and performance optimizations</li>
+                    <li>✅ Bug fixes and improvements</li>
+                </ul>
+                <p><strong>Note:</strong> This universal binary is ~2x larger due to including both architectures.</p>
+            ]]></description>
+            <pubDate>Fri, 05 Sep 2025 09:14:38 +0000</pubDate>
+            <sparkle:version>24</sparkle:version>
+            <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure 
+                url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.2/DeskFit-v0.4.2.dmg"
+                length="4316498"
+                type="application/octet-stream"
+                sparkle:edSignature="/rZcighf/cJoJKFf1uqlc8Dw7XPF8rLFsWwyFNFaeYTpck+OMcvx2K5bE/a2P3M0+JCduvI8QRCaDRb5hc3IAw==" />
+        </item>
+        <item>
             <title>DeskFit 0.4.0</title>
             <description><![CDATA[
                 <h3>DeskFit 0.4.0 - Enhanced Performance</h3>

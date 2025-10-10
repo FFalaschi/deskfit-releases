@@ -6,6 +6,32 @@
         <description>Updates for DeskFit - Your desk exercise companion</description>
         <language>en</language>
         <item>
+            <title>DeskFit 0.5.0 - AppUpdater Migration</title>
+            <description><![CDATA[
+                <h3>DeskFit 0.5.0 - AppUpdater Migration</h3>
+                <p><strong>🔄 Major Architecture Update:</strong> Migration from Sparkle to AppUpdater framework</p>
+                <ul>
+                    <li>🔄 <strong>AppUpdater Integration</strong> - Modern GitHub Releases-based update system</li>
+                    <li>✨ <strong>Simplified Updates</strong> - No manual appcast.xml management needed</li>
+                    <li>✅ Full Apple notarization and Gatekeeper approval</li>
+                    <li>🚀 Universal Binary - Native support for Intel (x86_64) and Apple Silicon (arm64)</li>
+                    <li>💪 Enhanced stability with improved error handling</li>
+                    <li>🎨 Complete icon system for all macOS sizes</li>
+                    <li>📦 All features working on macOS 14.0+</li>
+                </ul>
+                <p><strong>Note:</strong> This is the final Sparkle-compatible release. Future updates will use AppUpdater's GitHub Releases API.</p>
+            ]]></description>
+            <pubDate>Thu, 10 Oct 2025 12:20:00 +0000</pubDate>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.5.0/DeskFit-v0.5.0.dmg"
+                length="3678732"
+                type="application/octet-stream"
+                sparkle:edSignature="riPod3ei3Vn8zxCBuiUg3wbTC/+VybwUepTQA8cgZRXL7BA+d0lZOxExYy29zLneqJA5Ugb5fzqPwqmdTMbABw==" />
+        </item>
+        <item>
             <title>DeskFit 0.4.2</title>
             <description><![CDATA[
                 <h3>DeskFit 0.4.2 - Universal Binary Support</h3>
@@ -23,7 +49,7 @@
             <sparkle:version>24</sparkle:version>
             <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure 
+            <enclosure
                 url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.2/DeskFit-v0.4.2.dmg"
                 length="4316498"
                 type="application/octet-stream"
@@ -45,7 +71,7 @@
             <sparkle:version>22</sparkle:version>
             <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure 
+            <enclosure
                 url="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.0/DeskFit-v0.4.0.dmg"
                 length="3134612"
                 type="application/octet-stream"

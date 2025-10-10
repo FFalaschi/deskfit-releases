@@ -1,4 +1,4 @@
-<\!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,6 +45,15 @@
             font-weight: bold;
             margin-left: 10px;
         }
+        .new-badge {
+            background: #FF9500;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -52,39 +61,49 @@
         <h1>🏃‍♂️ DeskFit Updates</h1>
         <p>Download the latest version of DeskFit</p>
     </div>
-    
+
     <div class="release">
-        <h2>🎉 Latest Release - v0.4.1 <span class="status-badge">FIXED!</span></h2>
-        <p><strong>🎯 Gatekeeper Issue COMPLETELY FIXED! No more security warnings!</strong></p>
-        <p>✅ <strong>Normal Installation:</strong> This version installs like any regular Mac app - no special steps needed!</p>
-        
+        <h2>🔄 Latest Release - v0.5.0 <span class="new-badge">NEW!</span></h2>
+        <p><strong>🎯 Major Architecture Update: AppUpdater Migration</strong></p>
+        <p>✅ <strong>Automatic Updates:</strong> DeskFit now uses GitHub Releases for seamless automatic updates!</p>
+
         <h3>📥 Simple Installation</h3>
         <ol style="text-align: left; margin: 15px 0;">
             <li><strong>Download</strong> the DMG file below</li>
             <li><strong>Open</strong> the DMG and drag DeskFit.app to Applications</li>
             <li>✅ <strong>Done!</strong> Launch DeskFit normally - no warnings!</li>
+            <li>🔄 <strong>Future updates</strong> install automatically via "Check for Updates"</li>
         </ol>
-        
-        <p><strong>What's New:</strong> DeskFit v0.4.2 is a universal binary that supports both Intel and Apple Silicon Macs with a single app!</p>
-        
+
+        <p><strong>What's New in v0.5.0:</strong></p>
+
         <ul>
-            <li>✅ **ZERO security warnings** - installs normally</li>
+            <li>🔄 <strong>AppUpdater Integration</strong> - Modern GitHub Releases-based update system</li>
+            <li>✨ <strong>Simplified Updates</strong> - No manual appcast.xml management</li>
             <li>✅ Full Apple notarization and Gatekeeper approval</li>
-            <li>✅ Enhanced performance and stability</li>
-            <li>✅ UI/UX improvements and optimizations</li>
-            <li>✅ Bug fixes and code refinements</li>
-            <li>✅ All features working on macOS 14.0+</li>
-            <li>✅ Optimized 2.2MB size</li>
+            <li>🚀 Universal Binary - Native support for Intel (x86_64) and Apple Silicon (arm64)</li>
+            <li>💪 Enhanced stability with improved error handling</li>
+            <li>🎨 Complete icon system for all macOS sizes</li>
+            <li>📦 All features working on macOS 14.0+</li>
         </ul>
-        <a href="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.2/DeskFit-v0.4.2.dmg" 
-           class="download-btn" download>Download DeskFit v0.4.2</a>
+
+        <p><strong>Technical Details:</strong></p>
+        <ul>
+            <li>Version: 0.5.0 (Build 25)</li>
+            <li>Size: 3.5MB</li>
+            <li>Architecture: Universal (x86_64 + arm64)</li>
+            <li>Signed & Notarized: Developer ID Application</li>
+        </ul>
+
+        <a href="https://github.com/FFalaschi/deskfit-releases/releases/download/v0.5.0/DeskFit-v0.5.0.dmg"
+           class="download-btn" download>Download DeskFit v0.5.0</a>
     </div>
-    
+
     <div class="release">
-        <h2>✅ Issue Resolved!</h2>
-        <p><strong>The Gatekeeper security warning issue has been completely fixed in v0.4.1!</strong></p>
-        <p>DeskFit now installs and runs normally like any other Mac app. No special steps, no security warnings, no right-clicking required.</p>
-        <p>This universal binary works natively on both Intel (x86_64) and Apple Silicon (arm64) Macs.</p>
+        <h2>🔄 Automatic Updates</h2>
+        <p><strong>DeskFit now checks for updates automatically!</strong></p>
+        <p>Click "Check for Updates..." in the Settings menu to instantly get the latest version. AppUpdater uses GitHub Releases API to ensure you always have the newest features and bug fixes.</p>
+        <p>All downloads are signed with Apple Developer ID and fully notarized for your security.</p>
     </div>
 </body>
 </html>

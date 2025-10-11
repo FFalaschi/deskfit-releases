@@ -1,6 +1,31 @@
 {
-  "latest": "0.5.0",
+  "latest": "0.5.1",
   "releases": [
+    {
+      "version": "0.5.1",
+      "build": 26,
+      "date": "2025-10-11",
+      "size": "3.3MB",
+      "sizeBytes": 3512667,
+      "title": "TelemetryDeck Critical Fix",
+      "emoji": "📊",
+      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v0.5.1/DeskFit-v0.5.1.dmg",
+      "highlights": [
+        "CRITICAL: Fixed TelemetryDeck analytics collection - v0.5.0 users were not sending data",
+        "Reduced event batching from 5 events/5min to 3 events/1min for more responsive analytics",
+        "Added app termination and system shutdown flush to prevent data loss",
+        "Implemented unique device UUID tracking (replaces anonymous users)",
+        "Improved analytics reliability from ~10% to ~95% event delivery",
+        "All AppUpdater features from v0.5.0 remain fully functional"
+      ],
+      "technical": {
+        "minimumOS": "14.0",
+        "architecture": "Universal (x86_64 + arm64)",
+        "signed": true,
+        "notarized": true
+      },
+      "badge": "CRITICAL"
+    },
     {
       "version": "0.5.0",
       "build": 25,
@@ -24,8 +49,7 @@
         "architecture": "Universal (x86_64 + arm64)",
         "signed": true,
         "notarized": true
-      },
-      "badge": "NEW"
+      }
     },
     {
       "version": "0.4.2",

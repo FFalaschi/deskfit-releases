@@ -1,5 +1,11 @@
 {
   "latest": "0.5.1",
+  "appInfo": {
+    "name": "DeskFit",
+    "tagline": "Stay Active at Your Desk",
+    "description": "Smart exercise reminders for healthier work days",
+    "totalReleases": 4
+  },
   "releases": [
     {
       "version": "0.5.1",

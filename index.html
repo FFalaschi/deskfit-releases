@@ -3,163 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeskFit Updates</title>
+    <title>DeskFit - Stay Active at Your Desk</title>
+    <meta name="description" content="Smart exercise reminders for healthier work days. Free macOS app with 20+ exercises, intelligent scheduling, and progress tracking.">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
             line-height: 1.6;
             color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
-        .header {
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
             text-align: center;
-            margin-bottom: 50px;
-        }
-        .release {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background: #f9f9f9;
-        }
-        .download-btn {
-            background: #007AFF;
+            padding: 80px 20px 60px;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 6px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero .tagline {
+            font-size: 24px;
+            opacity: 0.95;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .hero .description {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-download-btn {
             display: inline-block;
-            margin-top: 10px;
+            background: white;
+            color: #667eea;
+            padding: 18px 48px;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            margin-bottom: 24px;
         }
-        .download-btn:hover {
-            background: #0056CC;
+
+        .hero-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+            background: #f8f9fa;
         }
-        .status-badge {
-            background: #34C759;
+
+        .hero-stats {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-top: 16px;
+        }
+
+        /* Content Section */
+        .content {
+            background: white;
+            border-radius: 20px 20px 0 0;
+            margin-top: -20px;
+            padding: 60px 20px 40px;
+        }
+
+        /* Features Grid */
+        .features-section {
+            margin-bottom: 80px;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .features-section .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 48px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            padding: 32px;
+            border-radius: 12px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: #667eea;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .feature-description {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Latest Release Section */
+        .latest-release-section {
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+
+        .release {
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 32px;
+            background: #ffffff;
+            margin-bottom: 24px;
+        }
+
+        .release h2 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .release h3 {
+            font-size: 20px;
+            margin: 24px 0 12px;
+            color: #1a1a1a;
+        }
+
+        .release p {
+            margin-bottom: 16px;
+            color: #495057;
+            line-height: 1.6;
+        }
+
+        .release ul {
+            margin: 16px 0 16px 24px;
+            color: #495057;
+        }
+
+        .release li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #667eea;
             color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 10px;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin-top: 8px;
         }
+
+        .download-btn:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
         .new-badge {
             background: #FF9500;
             color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 10px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-left: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
+
+        .technical-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .technical-details summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #495057;
+            user-select: none;
+        }
+
+        .technical-details[open] summary {
+            margin-bottom: 12px;
+        }
+
+        /* Trust Signals */
+        .trust-section {
+            text-align: center;
+            padding: 48px 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin: 0 auto 60px;
+            max-width: 900px;
+        }
+
+        .trust-section h3 {
+            font-size: 24px;
+            margin-bottom: 32px;
+            color: #1a1a1a;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+
+        .trust-badge-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .trust-badge-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .trust-badge-description {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Release History */
+        .release-history {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .release-history h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .release-history > p {
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .history-item {
+            border-top: 1px solid #e9ecef;
+            padding: 20px 0;
+        }
+
+        .history-item:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .version-badge {
+            background: #667eea;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 12px;
+        }
+
+        .history-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .history-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .history-details {
+            margin-top: 8px;
+        }
+
+        .highlights-preview {
+            font-size: 14px;
+            color: #666;
+            margin: 8px 0 12px;
+            line-height: 1.5;
+        }
+
+        .download-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .download-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Loading & Error States */
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 18px;
+        }
+
         .error-message {
             background: #FFF3CD;
             border-color: #FFC107;
             color: #856404;
         }
 
-        /* Release History Styles */
-        .release-history {
-            background: #fff;
-        }
-        .history-item {
-            border-top: 1px solid #eee;
-            padding: 15px 0;
-        }
-        .history-item:first-of-type {
-            border-top: none;
-            padding-top: 0;
-        }
-        .history-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        .version-badge {
-            background: #007AFF;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        .history-title {
-            font-size: 16px;
-            font-weight: 500;
-            color: #333;
-        }
-        .history-meta {
-            display: flex;
-            gap: 15px;
-            font-size: 14px;
-            color: #666;
-        }
-        .release-date {
-            color: #666;
-        }
-        .release-size {
-            color: #999;
-        }
-        .history-details {
-            margin-top: 8px;
-        }
-        .highlights-preview {
-            font-size: 14px;
-            color: #666;
-            margin: 8px 0;
-            line-height: 1.5;
-        }
-        .download-link {
-            color: #007AFF;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .download-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Loading state */
-        .loading {
-            text-align: center;
-            padding: 40px 20px;
-            color: #999;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            body {
-                margin: 20px auto;
-                padding: 15px;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
             }
+
+            .hero .tagline {
+                font-size: 20px;
+            }
+
+            .hero .description {
+                font-size: 16px;
+            }
+
+            .hero-download-btn {
+                padding: 16px 36px;
+                font-size: 18px;
+            }
+
+            .features-section h2 {
+                font-size: 28px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .trust-badges {
+                gap: 32px;
+            }
+
             .history-header {
                 flex-direction: column;
             }
-            .history-meta {
-                width: 100%;
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 20px 40px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .content {
+                padding: 40px 16px 32px;
+            }
+
+            .release {
+                padding: 24px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🏃‍♂️ DeskFit Updates</h1>
-        <p>Download the latest version of DeskFit</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>🏃‍♂️ DeskFit</h1>
+            <p class="tagline" id="hero-tagline">Stay Active at Your Desk</p>
+            <p class="description" id="hero-description">Smart exercise reminders for healthier work days</p>
+            <a href="#" id="hero-download-btn" class="hero-download-btn" download>
+                Download DeskFit
+            </a>
+            <div class="hero-stats" id="hero-stats">
+                Free Forever • Universal Binary • Apple Notarized
+            </div>
+        </div>
+    </section>
 
-    <!-- Latest Release (dynamically rendered) -->
-    <div id="latest-release">
-        <div class="loading">Loading latest release...</div>
-    </div>
+    <!-- Content Section -->
+    <div class="content">
+        <div class="container">
+            <!-- Features Section -->
+            <section class="features-section">
+                <h2>Everything You Need to Stay Active</h2>
+                <p class="subtitle">Designed for Mac users who care about their health</p>
 
-    <!-- Release History (dynamically rendered) -->
-    <div id="release-history"></div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🏃‍♂️</span>
+                        <h3 class="feature-title">Smart Exercise Library</h3>
+                        <p class="feature-description">20+ exercises across 6 categories including stretching, cardio, and strength exercises designed for your desk</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">⏰</span>
+                        <h3 class="feature-title">Intelligent Scheduling</h3>
+                        <p class="feature-description">Customizable intervals with smart working hours detection. Random or fixed timing to keep you engaged</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">📊</span>
+                        <h3 class="feature-title">Progress Tracking</h3>
+                        <p class="feature-description">Track daily exercise counts and maintain your streak. Visual charts show your activity over time</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">🔔</span>
+                        <h3 class="feature-title">Gentle Reminders</h3>
+                        <p class="feature-description">Non-intrusive notifications in your menu bar. Easy to postpone or skip when you're busy</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">🔄</span>
+                        <h3 class="feature-title">Auto Updates</h3>
+                        <p class="feature-description">Seamless updates through GitHub Releases. Stay current with the latest features and improvements</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">🍎</span>
+                        <h3 class="feature-title">Native macOS</h3>
+                        <p class="feature-description">Universal binary for Intel and Apple Silicon. Built with SwiftUI for optimal performance on macOS 14.0+</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Latest Release Section -->
+            <section class="latest-release-section">
+                <div id="latest-release">
+                    <div class="loading">Loading latest release...</div>
+                </div>
+            </section>
+
+            <!-- Trust Signals -->
+            <section class="trust-section">
+                <h3>Secure & Trustworthy</h3>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">✅</div>
+                        <div class="trust-badge-title">Apple Notarized</div>
+                        <div class="trust-badge-description">Fully signed and notarized by Apple for your security</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">🔒</div>
+                        <div class="trust-badge-description">Your data stays private on your Mac. No tracking or analytics collection</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">🆓</div>
+                        <div class="trust-badge-title">Free Forever</div>
+                        <div class="trust-badge-description">No subscriptions, no in-app purchases, no hidden costs</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Release History -->
+            <div id="release-history"></div>
+        </div>
+    </div>
 
     <!-- Load releases data and render -->
     <script src="releases.js"></script>

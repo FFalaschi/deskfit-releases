@@ -1,5 +1,5 @@
 // DeskFit Releases - Dynamic Content Renderer
-// Fetches releases.json and renders latest release + history
+// Fetches releases.json and renders content with hero, features, and release info
 
 (function() {
     'use strict';
@@ -27,11 +27,34 @@
         return date.toLocaleDateString('en-US', options);
     }
 
-    // Format file size for display
-    function formatSize(bytes) {
-        if (bytes < 1024) return bytes + ' B';
-        if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
-        return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+    // Update hero section with dynamic content
+    function updateHero(data) {
+        const latestRelease = data.releases.find(r => r.version === data.latest) || data.releases[0];
+        const appInfo = data.appInfo || {};
+
+        // Update hero download button with latest version
+        const heroBtn = document.getElementById('hero-download-btn');
+        if (heroBtn && latestRelease) {
+            heroBtn.href = latestRelease.downloadUrl;
+            heroBtn.textContent = `Download DeskFit v${latestRelease.version}`;
+        }
+
+        // Update hero stats with total releases
+        const heroStats = document.getElementById('hero-stats');
+        if (heroStats && appInfo.totalReleases) {
+            heroStats.textContent = `${appInfo.totalReleases} Releases • Free Forever • Universal Binary • Apple Notarized`;
+        }
+
+        // Update hero tagline and description from appInfo if provided
+        if (appInfo.tagline) {
+            const tagline = document.getElementById('hero-tagline');
+            if (tagline) tagline.textContent = appInfo.tagline;
+        }
+
+        if (appInfo.description) {
+            const description = document.getElementById('hero-description');
+            if (description) description.textContent = appInfo.description;
+        }
     }
 
     // Render latest release section
@@ -39,15 +62,15 @@
         const badgeHTML = release.badge ? `<span class="new-badge">${release.badge}!</span>` : '';
 
         const highlightsHTML = release.highlights.map(highlight => {
-            // Check if highlight has bold markdown-style formatting
             const formatted = highlight.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-            // Add emoji for main features
-            const emoji = formatted.includes('Integration') ? '🔄' :
+            const emoji = formatted.includes('CRITICAL') ? '🚨' :
+                         formatted.includes('Integration') ? '🔄' :
                          formatted.includes('Universal') ? '🚀' :
                          formatted.includes('Simplified') ? '✨' :
                          formatted.includes('notarization') ? '✅' :
                          formatted.includes('stability') ? '💪' :
                          formatted.includes('icon') ? '🎨' :
+                         formatted.includes('analytics') ? '📊' :
                          formatted.includes('features') ? '📦' : '';
             return `<li>${emoji} ${formatted}</li>`;
         }).join('');
@@ -56,28 +79,31 @@
             <div class="release">
                 <h2>${release.emoji} Latest Release - v${release.version} ${badgeHTML}</h2>
                 <p><strong>🎯 ${release.title}</strong></p>
-                <p>✅ <strong>Automatic Updates:</strong> DeskFit now uses GitHub Releases for seamless automatic updates!</p>
+                <p style="color: #666; font-size: 15px; margin-bottom: 20px;">Released ${formatDate(release.date)} • ${release.size}</p>
 
-                <p><strong>What's New in v${release.version}:</strong></p>
+                <h3>What's New</h3>
                 <ul>${highlightsHTML}</ul>
 
-                <p><strong>Technical Details:</strong></p>
-                <ul>
-                    <li>Version: ${release.version} (Build ${release.build})</li>
-                    <li>Size: ${release.size}</li>
-                    <li>Architecture: ${release.technical.architecture}</li>
-                    <li>Signed & Notarized: ${release.technical.signed && release.technical.notarized ? 'Developer ID Application' : 'No'}</li>
-                </ul>
+                <a href="${release.downloadUrl}" class="download-btn" download>
+                    Download DeskFit v${release.version}
+                </a>
 
-                <a href="${release.downloadUrl}"
-                   class="download-btn" download>Download DeskFit v${release.version}</a>
+                <details class="technical-details">
+                    <summary>Technical Details</summary>
+                    <ul style="margin-top: 12px;">
+                        <li><strong>Version:</strong> ${release.version} (Build ${release.build})</li>
+                        <li><strong>Size:</strong> ${release.size}</li>
+                        <li><strong>Minimum macOS:</strong> ${release.technical.minimumOS}</li>
+                        <li><strong>Architecture:</strong> ${release.technical.architecture}</li>
+                        <li><strong>Signed & Notarized:</strong> ${release.technical.signed && release.technical.notarized ? '✅ Developer ID Application' : '❌ No'}</li>
+                    </ul>
+                </details>
             </div>
         `;
     }
 
     // Render release history section
     function renderReleaseHistory(releases) {
-        // Skip the latest release (already shown above)
         const previousReleases = releases.slice(1);
 
         if (previousReleases.length === 0) {
@@ -86,7 +112,6 @@
 
         const historyItemsHTML = previousReleases.map(release => {
             const highlightsPreview = release.highlights.slice(0, 3).map(h => {
-                // Remove markdown bold for preview
                 return h.replace(/\*\*(.*?)\*\*/g, '$1');
             }).join(', ');
 
@@ -141,6 +166,9 @@
         if (!data || !data.releases || data.releases.length === 0) {
             return;
         }
+
+        // Update hero section with dynamic data
+        updateHero(data);
 
         // Find latest release
         const latestRelease = data.releases.find(r => r.version === data.latest) || data.releases[0];

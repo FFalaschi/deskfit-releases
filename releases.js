@@ -58,14 +58,6 @@
                 <p><strong>🎯 ${release.title}</strong></p>
                 <p>✅ <strong>Automatic Updates:</strong> DeskFit now uses GitHub Releases for seamless automatic updates!</p>
 
-                <h3>📥 Simple Installation</h3>
-                <ol style="text-align: left; margin: 15px 0;">
-                    <li><strong>Download</strong> the DMG file below</li>
-                    <li><strong>Open</strong> the DMG and drag DeskFit.app to Applications</li>
-                    <li>✅ <strong>Done!</strong> Launch DeskFit normally - no warnings!</li>
-                    <li>🔄 <strong>Future updates</strong> install automatically via "Check for Updates"</li>
-                </ol>
-
                 <p><strong>What's New in v${release.version}:</strong></p>
                 <ul>${highlightsHTML}</ul>
 

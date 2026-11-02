@@ -4,7 +4,7 @@
     "name": "DeskFit",
     "tagline": "Stay Active at Your Desk",
     "description": "Smart exercise reminders for healthier work days",
-    "totalReleases": 5
+    "totalReleases": 1
   },
   "releases": [
     {
@@ -30,101 +30,6 @@
         "notarized": true
       },
       "badge": "NEW"
-    },
-    {
-      "version": "0.5.1",
-      "build": 26,
-      "date": "2025-10-11",
-      "size": "3.4MB",
-      "sizeBytes": 3515376,
-      "title": "TelemetryDeck Critical Fix",
-      "emoji": "📊",
-      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v0.5.1/DeskFit-v0.5.1.dmg",
-      "highlights": [
-        "CRITICAL: Fixed TelemetryDeck analytics collection - v0.5.0 users were not sending data",
-        "Reduced event batching from 5 events/5min to 3 events/1min for more responsive analytics",
-        "Added app termination and system shutdown flush to prevent data loss",
-        "Implemented unique device UUID tracking (replaces anonymous users)",
-        "Improved analytics reliability from ~10% to ~95% event delivery",
-        "All AppUpdater features from v0.5.0 remain fully functional"
-      ],
-      "technical": {
-        "minimumOS": "14.0",
-        "architecture": "Universal (x86_64 + arm64)",
-        "signed": true,
-        "notarized": true
-      },
-      "badge": "CRITICAL"
-    },
-    {
-      "version": "0.5.0",
-      "build": 25,
-      "date": "2025-10-10",
-      "size": "3.5MB",
-      "sizeBytes": 3678732,
-      "title": "AppUpdater Migration",
-      "emoji": "🔄",
-      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v0.5.0/DeskFit-v0.5.0.dmg",
-      "highlights": [
-        "AppUpdater Integration - Modern GitHub Releases-based update system",
-        "Simplified Updates - No manual appcast.xml management",
-        "Full Apple notarization and Gatekeeper approval",
-        "Universal Binary - Native support for Intel (x86_64) and Apple Silicon (arm64)",
-        "Enhanced stability with improved error handling",
-        "Complete icon system for all macOS sizes",
-        "All features working on macOS 14.0+"
-      ],
-      "technical": {
-        "minimumOS": "14.0",
-        "architecture": "Universal (x86_64 + arm64)",
-        "signed": true,
-        "notarized": true
-      }
-    },
-    {
-      "version": "0.4.2",
-      "build": 24,
-      "date": "2025-09-05",
-      "size": "4.1MB",
-      "sizeBytes": 4316498,
-      "title": "Universal Binary Support",
-      "emoji": "🚀",
-      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.2/DeskFit-v0.4.2.dmg",
-      "highlights": [
-        "Universal binary - works on both Intel (x86_64) and Apple Silicon (arm64) Macs",
-        "Native performance on both processor types",
-        "Single app bundle for all Mac users",
-        "Enhanced stability and performance optimizations",
-        "Bug fixes and improvements"
-      ],
-      "technical": {
-        "minimumOS": "14.0",
-        "architecture": "Universal (x86_64 + arm64)",
-        "signed": true,
-        "notarized": true
-      }
-    },
-    {
-      "version": "0.4.0",
-      "build": 22,
-      "date": "2025-08-06",
-      "size": "3.0MB",
-      "sizeBytes": 3134612,
-      "title": "Enhanced Performance",
-      "emoji": "⚡",
-      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v0.4.0/DeskFit-v0.4.0.dmg",
-      "highlights": [
-        "Enhanced performance and stability",
-        "UI/UX improvements and optimizations",
-        "Complete signing with Apple Developer ID",
-        "Bug fixes and code refinements"
-      ],
-      "technical": {
-        "minimumOS": "14.0",
-        "architecture": "Universal (x86_64 + arm64)",
-        "signed": true,
-        "notarized": true
-      }
     }
   ]
 }

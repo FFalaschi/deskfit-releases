@@ -1,12 +1,36 @@
 {
-  "latest": "0.5.1",
+  "latest": "2.0.0",
   "appInfo": {
     "name": "DeskFit",
     "tagline": "Stay Active at Your Desk",
     "description": "Smart exercise reminders for healthier work days",
-    "totalReleases": 4
+    "totalReleases": 5
   },
   "releases": [
+    {
+      "version": "2.0.0",
+      "build": 27,
+      "date": "2026-11-02",
+      "size": "3.0MB",
+      "sizeBytes": 3179661,
+      "title": "DeskFit 2.0",
+      "emoji": "",
+      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v2.0.0/DeskFit-v2.0.0.dmg",
+      "highlights": [
+        "The plant: your streak and progress grow a plant you look after, with stages, badges and a weekly target.",
+        "Notch mode: on a Mac with a notch, reminders and exercises appear in the notch. Menu bar only is still available.",
+        "New Settings: Schedule, Exercises, Progress and General, with a library you can edit and add your own exercises to.",
+        "Onboarding: a short four-step setup on first launch.",
+        "Diagnostics with opt-out: usage counts and crash reports help improve DeskFit, including the names of exercises you add. Turn them off during onboarding or in Settings > General."
+      ],
+      "technical": {
+        "minimumOS": "15.0",
+        "architecture": "Universal (x86_64 + arm64)",
+        "signed": true,
+        "notarized": true
+      },
+      "badge": "NEW"
+    },
     {
       "version": "0.5.1",
       "build": 26,

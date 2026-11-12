@@ -1,12 +1,32 @@
 {
-  "latest": "2.1.0",
+  "latest": "2.1.1",
   "appInfo": {
     "name": "DeskFit",
     "tagline": "Stay Active at Your Desk",
     "description": "Smart exercise reminders for healthier work days",
-    "totalReleases": 2
+    "totalReleases": 3
   },
   "releases": [
+    {
+      "version": "2.1.1",
+      "build": 29,
+      "date": "2026-11-12",
+      "size": "4.2MB",
+      "sizeBytes": 4417778,
+      "title": "DeskFit 2.1.1",
+      "emoji": "",
+      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v2.1.1/DeskFit-v2.1.1.dmg",
+      "highlights": [
+        "New app icon: a sprout that stretches toward the sun, so DeskFit is easy to spot in Finder, Launchpad and the Dock."
+      ],
+      "technical": {
+        "minimumOS": "15.0",
+        "architecture": "Universal (x86_64 + arm64)",
+        "signed": true,
+        "notarized": true
+      },
+      "badge": "NEW"
+    },
     {
       "version": "2.1.0",
       "build": 28,
@@ -28,8 +48,7 @@
         "architecture": "Universal (x86_64 + arm64)",
         "signed": true,
         "notarized": true
-      },
-      "badge": "NEW"
+      }
     },
     {
       "version": "2.0.0",
@@ -52,8 +71,7 @@
         "architecture": "Universal (x86_64 + arm64)",
         "signed": true,
         "notarized": true
-      },
-      "badge": "NEW"
+      }
     }
   ]
 }

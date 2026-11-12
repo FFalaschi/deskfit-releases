@@ -1,12 +1,36 @@
 {
-  "latest": "2.0.0",
+  "latest": "2.1.0",
   "appInfo": {
     "name": "DeskFit",
     "tagline": "Stay Active at Your Desk",
     "description": "Smart exercise reminders for healthier work days",
-    "totalReleases": 1
+    "totalReleases": 2
   },
   "releases": [
+    {
+      "version": "2.1.0",
+      "build": 28,
+      "date": "2026-11-12",
+      "size": "3.1MB",
+      "sizeBytes": 3203706,
+      "title": "DeskFit 2.1",
+      "emoji": "",
+      "downloadUrl": "https://github.com/FFalaschi/deskfit-releases/releases/download/v2.1.0/DeskFit-v2.1.0.dmg",
+      "highlights": [
+        "Right-click menu: right-click the menu bar icon to see your status, start or snooze a session, rest for today, or open Settings, Send Feedback, Check for Updates and About.",
+        "Shorter onboarding: three steps instead of four, with your working days, hours and reminder timing on one screen.",
+        "Cleaner panel: a flat panel without the title, a small status line when DeskFit isn't active, and a simpler weekly progress bar.",
+        "Clearer reminders: choose regular or random timing in Settings > Schedule, with a one-line summary of what you'll get.",
+        "Easier exercise library: each exercise shows its categories, search also matches categories, and steps are now optional when you add your own."
+      ],
+      "technical": {
+        "minimumOS": "15.0",
+        "architecture": "Universal (x86_64 + arm64)",
+        "signed": true,
+        "notarized": true
+      },
+      "badge": "NEW"
+    },
     {
       "version": "2.0.0",
       "build": 27,

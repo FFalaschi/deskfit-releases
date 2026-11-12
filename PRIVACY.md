@@ -66,7 +66,7 @@ Checking for updates is manual only: DeskFit contacts GitHub's public API only w
 
 ## Turning it off
 
-Diagnostics are on by default. You can turn them off in onboarding step 1, or later in Settings > General under "Share diagnostics".
+Diagnostics are on by default. DeskFit tells you this on the first onboarding screen. You can turn them off anytime in Settings > General under "Share diagnostics".
 
 Turning it off takes effect immediately and deletes:
 
